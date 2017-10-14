@@ -8,7 +8,7 @@ class Post(models.Model):
 	yazi = models.TextField()
 	olusturulmaTarihi = models.DateTimeField(default=timezone.now)
 	yayinlamaTarihi = models.DateTimeField(
-		blank=True, null=True)
+		default=timezone.now, null=True)
 	
 	def yayinla(self):
 		self.yayinlamaTarihi = timezone.now()
